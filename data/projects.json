@@ -1,0 +1,755 @@
+{
+  "generatedAt": "2026-08-05T16:37:55.592Z",
+  "projectCount": 54,
+  "rootsScanned": 6,
+  "projects": [
+    {
+      "name": "Bike Delivery Elite",
+      "description": "A local-first iPhone shift recorder with route replay, event logs, notes, and derived delivery metrics.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Delivery",
+        "SwiftUI",
+        "GPS",
+        "Analytics"
+      ],
+      "github": "https://github.com/mjcreativemedia/bike-delivery-elite-site",
+      "demo": null,
+      "image": "/projects/bde.png",
+      "featured": 1
+    },
+    {
+      "name": "SlowRec",
+      "description": "Native Mac recording software built for long sessions, simple capture, and practical media workflows.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Swift",
+        "macOS",
+        "Recording",
+        "Media"
+      ],
+      "github": null,
+      "demo": null,
+      "image": "/projects/slowrec.png",
+      "featured": 2
+    },
+    {
+      "name": "KJV Atlas",
+      "description": "A static-first Scripture atlas with 80 books, 36,702 verse records, search, topics, maps, and precept connections.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Bible",
+        "JavaScript",
+        "Python",
+        "Search"
+      ],
+      "github": "https://github.com/mjcreativemedia/kjv-atlas",
+      "demo": null,
+      "image": "/projects/kjv-atlas.png",
+      "featured": 3
+    },
+    {
+      "name": "Own Your Proof",
+      "description": "A marketing and evidence system that turns a business's real work into structured, reviewable website content.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Marketing",
+        "Automation",
+        "Astro",
+        "Operations"
+      ],
+      "github": "https://github.com/mjcreativemedia/own-your-proof",
+      "demo": null,
+      "image": "/projects/own-your-proof.png",
+      "featured": 4
+    },
+    {
+      "name": "BearRilla Films",
+      "description": "A cinematic streaming-style home built around a creator's real productions, characters, scenes, and music.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Media",
+        "Next.js",
+        "React",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/bearrilla-films",
+      "demo": "https://bearrillarecords.com",
+      "image": "/projects/bearrilla.jpg",
+      "featured": 5
+    },
+    {
+      "name": "Detail Quote",
+      "description": "A local-first iPhone quoting app for creating, saving, tracking, and sharing customer-ready detailing estimates.",
+      "category": "Experiments",
+      "status": "active",
+      "tags": [
+        "SwiftUI",
+        "iOS",
+        "Sales",
+        "Local-first"
+      ],
+      "github": null,
+      "demo": null,
+      "image": "/projects/detail-quote.png",
+      "featured": 6
+    },
+    {
+      "name": "Apartments JSON",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Api Client React",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Api Server",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "Drizzle",
+        "Express"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Api Spec",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Api Zod",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Biblical Earth Explorer",
+      "description": "An interactive, educational 3D visualization of the Biblical Earth model described in the source material. Built with Vite, vanilla JavaScript, Three.js, and plain CSS.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Vite",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/biblical-earth-explorer",
+      "demo": "https://dash.cloudflare.com/",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Browser Automation",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Buff Guy Detailing Proof Site",
+      "description": "This is a reusable Astro starter for owner-operated service businesses that earn trust by showing real work.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Catalyst",
+      "description": "A local-first Polymarket research screener and paper account.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Channel Graph",
+      "description": "A deliberately small, durable YouTube channel transcript collector. It stores the catalogue, collection state, and transcript corpus in one SQLite database and processes one video at a time.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Python"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Codex Site Template",
+      "description": "A reusable starter repo for building polished static websites with Codex, then deploying them to GitHub Pages.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vite",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/control-under-pressure-site",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Compress Video",
+      "description": "A native macOS utility for fast video compression without opening Terminal.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Swift"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Cornerstone Life Group",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [],
+      "github": "https://github.com/mjcreativemedia/cornerstonelifegroup",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Daniels Plumbing",
+      "description": "Astro website for Daniel Muñoz, a local plumber serving Franklin Park and nearby communities.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro"
+      ],
+      "github": "https://github.com/mjcreativemedia/daniels-plumbing",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Db",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "Drizzle"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Digital Works Workspace (Personal OS)",
+      "description": "Personal operating workspace for Digital Works records, research, financial evidence, forms, source material, commands, and system views.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Dough Boyz Party Snacks",
+      "description": "Static Astro marketing site for a premium adult infused-treat and party-favor business.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "Tailwind CSS",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/dough-boyz-party-snacks",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Ej The Shooter Proof Site",
+      "description": "Astro portfolio and proof site for Eric / EJ The Shooter.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/ej-the-shooter",
+      "demo": "https://github.com/mjcreativemedia/ej-the-shooter#readme",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Ekom",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+      "category": "Systems",
+      "status": "active",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vite"
+      ],
+      "github": null,
+      "demo": "https://oxc.rs",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Flock Status",
+      "description": "Small YouTube tracking dashboard for weekly lesson counts.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/disciples",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Forever Young Tree Services",
+      "description": "This is a reusable Astro starter for owner-operated service businesses that earn trust by showing real work.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/forever-young-tree-services",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Groupme Pod Tool",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Happy Nails Hyde Park",
+      "description": "This is a reusable Astro starter for owner-operated service businesses that earn trust by showing real work.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/happy-nails-hyde-park",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "In Ty I Trust",
+      "description": "Static Astro website for King C.I.G., prepared for Cloudflare Pages.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/in-ty-i-trust",
+      "demo": "https://intyitrust.com",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Index Layer",
+      "description": "sh npm create astro@latest -- --template minimal",
+      "category": "Systems",
+      "status": "active",
+      "tags": [
+        "Astro"
+      ],
+      "github": "https://github.com/mjcreativemedia/indexlayer",
+      "demo": "https://docs.astro.build",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Indexlayer Gsc Toolkit",
+      "description": "Local-first Google Search Console telemetry toolkit for publishing infrastructure.",
+      "category": "Systems",
+      "status": "active",
+      "tags": [
+        "Express",
+        "React",
+        "Vite"
+      ],
+      "github": "https://github.com/mjcreativemedia/indexlayer-gsc-toolkit",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Juice Lab 93",
+      "description": "A tiny local juice planning simulator for estimating a grocery run before buying produce.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Python"
+      ],
+      "github": "https://github.com/mjcreativemedia/juice-lab-95",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Lakeshore Outdoor Services",
+      "description": "The static public/robots.txt file is intentionally omitted so the @astrojs/robots integration can manage the generated rules.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro"
+      ],
+      "github": "https://github.com/mjcreativemedia/Lakeshore-Outdoor-Services",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Landing",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Mockup Sandbox",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Muscle Wolf Gang Fitness",
+      "description": "Astro website for Muscle Wolf Gang Fitness.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "github": "https://github.com/mjcreativemedia/muscle-wolfgang-fitness",
+      "demo": "https://github.com/mjcreativemedia/muscle-wolfgang-fitness#readme",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Opportunity Engine",
+      "description": "A small source-adapter system for normalizing public government records.",
+      "category": "Systems",
+      "status": "active",
+      "tags": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/opportunity-engine",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Own Your Proof Content Studio",
+      "description": "Reusable 1080 × 1350 Instagram post templates built with Astro and CSS.",
+      "category": "Projects",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "Tailwind CSS"
+      ],
+      "github": "https://github.com/mjcreativemedia/own-your-proof",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Oyp Instagram Normalization",
+      "description": "Reusable tooling for OYP proof jobs",
+      "category": "Systems",
+      "status": "active",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Profile First Service Business Starter",
+      "description": "This is a reusable Astro starter for owner-operated service businesses that earn trust by showing real work.",
+      "category": "Systems",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Real Hebrew Israelites Archive",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Projects",
+      "status": "archived",
+      "tags": [
+        "Astro"
+      ],
+      "github": "https://github.com/mjcreativemedia/real-hebrew-israelites-archive",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Resources",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Rest Express",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Drizzle",
+        "Express",
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Satcom911 Archive Utilities",
+      "description": "1. downloadarchive.py - first run. 2. resumedownload.py - resume downloads, skipping existing files. 3. buildinventory.py - generate inventory.csv and duplicates.csv. 4. searcharchive.py \"trust\" - filename/folder search.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "Python"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Scripts",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Site Creator Vinext Starter",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Drizzle",
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "github": null,
+      "demo": "https://orm.drizzle.team/docs/get-started/d1-new",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Slowrec Sessions",
+      "description": "Minimal static renderer and publish endpoint for SlowRec session documents.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Cloudflare"
+      ],
+      "github": null,
+      "demo": "https://sessions.slowrec.com/api/publish",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Stranjae",
+      "description": "Astro site for the public Stranjae Hair experience and the internal Stranjae Studio MVP.",
+      "category": "Client work",
+      "status": "active",
+      "tags": [
+        "Astro",
+        "TypeScript"
+      ],
+      "github": "https://github.com/mjcreativemedia/stranjae",
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Transcript",
+      "description": "A minimal native macOS SwiftUI app for fetching YouTube captions through a bundled Python helper.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Swift",
+        "Python"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Upload Assist",
+      "description": "Upload Assist is a Cloudflare Pages publishing assistant with a local Mac bridge for file work.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Cloudflare"
+      ],
+      "github": "https://github.com/mjcreativemedia/upload-assist",
+      "demo": "https://your-pages-domain.example/api/oauth/google/callback",
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "WK",
+      "description": "WK is a small, local workflow for building software with ChatGPT when a full coding agent is unavailable, unaffordable, or unnecessary.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Python"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "Workspace",
+      "description": "A local software project in Mitchell's working archive.",
+      "category": "Experiments",
+      "status": "prototype",
+      "tags": [
+        "TypeScript"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    },
+    {
+      "name": "YouTube Downloader",
+      "description": "A minimal native macOS utility for saving YouTube videos without opening Terminal.",
+      "category": "Tools",
+      "status": "active",
+      "tags": [
+        "Swift"
+      ],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "featured": null
+    }
+  ]
+}
