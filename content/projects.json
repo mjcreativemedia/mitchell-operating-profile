@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:57:20.933Z",
+  "generatedAt": "2026-08-05T19:58:24.072Z",
   "projectCount": 52,
   "rootsScanned": 6,
   "projects": [
@@ -70,7 +70,7 @@
     {
       "name": "BearRilla Films",
       "description": "A cinematic streaming-style home built around a creator's real productions, characters, scenes, and music.",
-      "category": "Projects",
+      "category": "Client work",
       "status": "active",
       "tags": [
         "Media",

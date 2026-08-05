@@ -83,6 +83,7 @@ const curated = {
     tags: ["Media", "Next.js", "React", "Cloudflare"],
     featured: 5,
     demo: "https://bearrillarecords.com",
+    category: "Client work",
   },
   "detail quote": {
     name: "Detail Quote",
