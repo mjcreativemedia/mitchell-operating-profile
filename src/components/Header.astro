@@ -1,7 +1,7 @@
 ---
 const links = [
-  ["Software", "/software"], ["Client work", "/client-work"], ["Operations", "/operations"],
-  ["Fitness", "/fitness"], ["Skills", "/skills"], ["About", "/about"]
+  ["Software", "/software/"], ["Client work", "/client-work/"], ["Operations", "/operations/"],
+  ["Fitness", "/fitness/"], ["Skills", "/skills/"], ["About", "/about/"]
 ];
 ---
 <header class="site-header">
@@ -9,5 +9,5 @@ const links = [
   <nav aria-label="Primary navigation">
     {links.map(([label, href]) => <a href={href}>{label}</a>)}
   </nav>
-  <a class="header-contact" href="/contact">Contact ↗</a>
+  <a class="header-contact" href="/contact/">Contact ↗</a>
 </header>

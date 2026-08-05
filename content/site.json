@@ -7,9 +7,9 @@
   "location": "Chicago, Illinois",
   "startedProgramming": 2017,
   "services": [
-    { "title": "Software", "description": "Native apps, web products, search tools, and automation.", "href": "/software", "accent": "blue" },
-    { "title": "Client Work", "description": "Websites and practical systems for real businesses.", "href": "/client-work", "accent": "orange" },
-    { "title": "Operations", "description": "Maintenance, documentation, repair, and process improvement.", "href": "/operations", "accent": "acid" },
-    { "title": "Fitness", "description": "Boxing, strength training, cycling, and work capacity.", "href": "/fitness", "accent": "paper" }
+    { "title": "Software", "description": "Native apps, web products, search tools, and automation.", "href": "/software/", "accent": "blue" },
+    { "title": "Client Work", "description": "Websites and practical systems for real businesses.", "href": "/client-work/", "accent": "orange" },
+    { "title": "Operations", "description": "Maintenance, documentation, repair, and process improvement.", "href": "/operations/", "accent": "acid" },
+    { "title": "Fitness", "description": "Boxing, strength training, cycling, and work capacity.", "href": "/fitness/", "accent": "paper" }
   ]
 }
