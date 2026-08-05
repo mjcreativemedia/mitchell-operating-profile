@@ -14,17 +14,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mitchell Argamasilla — Software Developer & Builder",
-  description: "The operating profile of Mitchell Argamasilla: software projects, client work, delivery intelligence, practical systems, and hands-on problem solving in Chicago.",
+  description: "The operating profile of Mitchell Argamasilla: software, operations, maintenance, delivery intelligence, physical performance, and practical problem solving in Chicago.",
   openGraph: {
     title: "Mitchell Argamasilla — Software Developer & Builder",
-    description: "54 projects indexed. Software, delivery intelligence, client work, and practical systems from Chicago.",
+    description: "A builder across software, operations, maintenance, delivery, and practical systems in Chicago.",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Mitchell Argamasilla operating profile" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mitchell Argamasilla — Software Developer & Builder",
-    description: "54 projects indexed. Software, delivery intelligence, client work, and practical systems from Chicago.",
+    description: "A builder across software, operations, maintenance, delivery, and practical systems in Chicago.",
     images: ["/og.png"],
   },
   icons: {
