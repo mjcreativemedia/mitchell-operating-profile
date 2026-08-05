@@ -42,14 +42,14 @@ const curated = {
   "bike delivery elite": {
     name: "Bike Delivery Elite",
     description: "A delivery intelligence system for recording shifts, replaying routes, and turning courier work into usable operational data.",
-    image: "/projects/bde.png",
+    image: "/projects/bde-route.png",
     tags: ["Delivery", "SwiftUI", "GPS", "Analytics"],
     featured: 1,
   },
   dashlog: {
     name: "Bike Delivery Elite",
     description: "A local-first iPhone shift recorder with route replay, event logs, notes, and derived delivery metrics.",
-    image: "/projects/bde.png",
+    image: "/projects/bde-route.png",
     tags: ["Delivery", "SwiftUI", "GPS", "Analytics"],
     featured: 1,
   },

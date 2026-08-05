@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:58:24.072Z",
+  "generatedAt": "2026-08-05T20:14:01.172Z",
   "projectCount": 52,
   "rootsScanned": 6,
   "projects": [
@@ -16,7 +16,7 @@
       ],
       "github": "https://github.com/mjcreativemedia/bike-delivery-elite-site",
       "demo": null,
-      "image": "/projects/bde.png",
+      "image": "/projects/bde-route.png",
       "featured": 1
     },
     {

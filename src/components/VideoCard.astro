@@ -1,0 +1,17 @@
+---
+interface Props { src: string; poster: string; title: string; caption: string; }
+const { src, poster, title, caption } = Astro.props;
+---
+<figure class="video-card">
+  <video controls playsinline preload="metadata" poster={poster} aria-label={title}>
+    <source src={src} type="video/mp4" />
+  </video>
+  <figcaption><strong>{title}</strong><span>{caption}</span></figcaption>
+</figure>
+<style>
+  .video-card{margin:0;border:1px solid var(--ink);background:#fff;color:var(--ink)}
+  video{display:block;width:100%;aspect-ratio:9/14;object-fit:cover;background:#111}
+  figcaption{display:flex;flex-direction:column;gap:7px;padding:17px}
+  strong{font-size:1.1rem;letter-spacing:-.03em}
+  span{color:var(--muted);font-size:.86rem;line-height:1.4}
+</style>
