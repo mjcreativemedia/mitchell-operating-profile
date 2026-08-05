@@ -37,6 +37,13 @@ const workPattern = [
   ["Personal workflow", "Built SlowRec and other utilities to remove friction from recurring work."],
 ];
 
+const helpRoutes = [
+  ["01", "Looking for a developer?", "Explore native apps, web products, search tools, and automation systems.", "View software projects", "#work"],
+  ["02", "Need a website?", "See client work built for real businesses, customers, and service areas.", "See client work", "#relationships"],
+  ["03", "Need IT or technical support?", "Review hands-on troubleshooting, repair, networking, and software capabilities.", "View technical skills", "#capabilities"],
+  ["04", "Need operations or maintenance help?", "See how physical work, documentation, and process improvement reinforce each other.", "View real-world experience", "#operations"],
+];
+
 function ProjectLinks({ project }: { project: Project }) {
   if (!project.github && !project.demo) return <span className="project-state">{project.status}</span>;
   return (
@@ -102,6 +109,24 @@ export default function Home() {
         <div><strong>Chicago</strong><span>current operating base</span></div>
         <div><strong>Purdue</strong><span>university foundation</span></div>
         <div><strong>Courier</strong><span>current field occupation</span></div>
+      </section>
+
+      <section className="help-section" aria-labelledby="help-heading">
+        <div className="help-intro">
+          <p className="eyebrow">Open the right workshop door</p>
+          <h2 id="help-heading">What can I help you with?</h2>
+          <p>You do not need to understand my whole background first. Start with the problem you need solved.</p>
+        </div>
+        <div className="help-grid">
+          {helpRoutes.map(([number, title, copy, action, href]) => (
+            <a className="help-card" href={href} key={number}>
+              <span className="help-number">{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <strong>{action} ↓</strong>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="builder-framework" aria-labelledby="builder-heading">
@@ -190,7 +215,7 @@ export default function Home() {
         {!query && category === "All" && <p className="index-note">Showing 12 of {projectData.projectCount}. Search or choose a category to inspect the full index.</p>}
       </section>
 
-      <section className="skills-section">
+      <section className="skills-section" id="capabilities">
         <div className="section-heading">
           <div><p className="eyebrow">03 · Build skills</p><h2>Capability across contexts</h2></div>
           <p>I am most useful where technical work touches operations, people, and physical constraints. The goal is range without losing depth.</p>
