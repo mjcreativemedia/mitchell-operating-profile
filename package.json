@@ -6,7 +6,8 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/prepare-sites.mjs",
+    "build": "astro build",
+    "build:sites": "astro build && node scripts/prepare-sites.mjs",
     "preview": "astro preview",
     "portfolio:refresh": "node scripts/generate-projects.mjs"
   },
