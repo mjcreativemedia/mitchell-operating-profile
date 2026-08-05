@@ -3,6 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import MediaSlot from "../components/MediaSlot.astro";
 import site from "../../content/site.json";
 import { appProjectCount } from "../lib/projects";
+const skillGroups = [
+  ["Software", ["SwiftUI", "JavaScript", "TypeScript", "React", "Astro", "Node", "REST APIs", "Cloudflare"]],
+  ["IT", ["Computer repair", "Network setup", "Device troubleshooting", "System maintenance"]],
+  ["Maintenance", ["Facility upkeep", "Bike repair", "General repairs", "Preventive checks"]],
+  ["Business", ["Marketing", "UX", "Sales", "Operations", "Technical SEO"]],
+  ["Communication", ["Customer service", "Documentation", "Teaching", "Clear handoffs"]],
+  ["Tools", ["AI workflows", "Automation", "Git", "Xcode", "Command line", "Analytics"]],
+];
 ---
 <BaseLayout>
   <section class="home-hero">
@@ -32,13 +40,18 @@ import { appProjectCount } from "../lib/projects";
     <div><strong>{appProjectCount}</strong><span>apps & tools indexed</span></div><div><strong>2017</strong><span>started programming</span></div><div><strong>Chicago</strong><span>operating base</span></div><div><strong>Purdue</strong><span>university foundation</span></div>
   </section>
 
+  <section class="home-skills">
+    <div class="home-section-title"><p class="eyebrow">Skills</p><h2>Capability organized by the work.</h2></div>
+    <div class="skills-grid">{skillGroups.map(([title, skills], index) => <article><span>0{index + 1}</span><h3>{title}</h3><div class="tag-list">{(skills as string[]).map((skill) => <span>{skill}</span>)}</div></article>)}</div>
+  </section>
+
   <section class="home-contact"><p class="eyebrow">The short version</p><h2>I build things, solve problems, and follow through.</h2><a class="button dark" href="/contact/">Start a conversation ↗</a></section>
 </BaseLayout>
 
 <style>
 .home-hero { min-height:calc(100vh - 74px); display:grid; grid-template-columns:1.25fr .75fr; gap:7vw; padding:clamp(55px,7vw,100px) 4vw; align-items:center; }.home-copy h1 { margin:0; font-size:clamp(4.6rem,10vw,10rem); line-height:.76; letter-spacing:-.09em; }.home-copy h2 { margin:38px 0 16px; max-width:850px; font-size:clamp(1.8rem,3.3vw,3.5rem); line-height:1; letter-spacing:-.055em; }.home-copy>p:last-of-type { max-width:670px; color:var(--muted); font-size:1.1rem; line-height:1.55; }.hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:30px; }.hero-photo { aspect-ratio:4/5; border:1px solid var(--ink); position:relative; overflow:hidden; background:var(--blue); box-shadow:16px 16px 0 var(--acid); }.hero-photo img { width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.12); }.hero-photo span { position:absolute; left:14px; right:14px; bottom:14px; padding:11px; background:var(--paper); border:1px solid var(--ink); font:700 .6rem/1.3 monospace; text-transform:uppercase; }
 .home-services,.highlights { padding:clamp(70px,9vw,130px) 4vw; }.home-services { background:var(--orange); }.home-section-title { display:grid; grid-template-columns:.55fr 1.25fr .35fr; gap:5vw; align-items:end; margin-bottom:48px; }.home-section-title h2 { margin:0; font-size:clamp(3rem,6vw,6rem); line-height:.88; letter-spacing:-.07em; }.home-section-title>a { font:800 .65rem/1.4 monospace; text-transform:uppercase; border-bottom:1px solid; justify-self:end; }.service-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--ink); }.service-card { min-height:280px; padding:24px; display:flex; flex-direction:column; border-right:1px solid var(--ink); }.service-card:last-child { border:0; }.service-card span,.service-card strong { font:800 .63rem/1 monospace; text-transform:uppercase; }.service-card h3 { margin:68px 0 12px; font-size:2rem; letter-spacing:-.055em; }.service-card p { margin:0; color:#3f3e3a; line-height:1.45; }.service-card strong { margin-top:auto; }.service-card:hover { background:var(--paper); }
-.highlights { background:#d8d7d0; }.quick-stats { display:grid; grid-template-columns:repeat(4,1fr); background:var(--ink); color:#fff; }.quick-stats div { min-height:145px; padding:28px 3vw; display:flex; flex-direction:column; justify-content:center; border-right:1px solid #363633; }.quick-stats strong { color:var(--acid); font-size:clamp(2rem,3.5vw,3.8rem); letter-spacing:-.06em; }.quick-stats span { color:#999; font:700 .62rem/1.4 monospace; text-transform:uppercase; }.home-contact { padding:clamp(80px,10vw,150px) 4vw; background:var(--acid); display:grid; grid-template-columns:.5fr 1.4fr .4fr; gap:5vw; align-items:end; }.home-contact h2 { margin:0; font-size:clamp(3rem,6vw,6.6rem); line-height:.88; letter-spacing:-.075em; }
-@media(max-width:900px){.home-hero{grid-template-columns:1fr}.hero-photo{max-width:450px}.home-section-title{grid-template-columns:1fr}.home-section-title>a{justify-self:start}.service-grid{grid-template-columns:repeat(2,1fr)}.service-card{border-bottom:1px solid var(--ink)}.home-contact{grid-template-columns:1fr}.quick-stats{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.home-hero,.home-services,.highlights,.home-contact{padding-left:20px;padding-right:20px}.home-copy h1{font-size:21vw}.service-grid{grid-template-columns:1fr}.service-card{border-right:0}.quick-stats div{padding:22px 20px}.home-contact .button{justify-self:start}}
+.highlights { background:#d8d7d0; }.quick-stats { display:grid; grid-template-columns:repeat(4,1fr); background:var(--ink); color:#fff; }.quick-stats div { min-height:145px; padding:28px 3vw; display:flex; flex-direction:column; justify-content:center; border-right:1px solid #363633; }.quick-stats strong { color:var(--acid); font-size:clamp(2rem,3.5vw,3.8rem); letter-spacing:-.06em; }.quick-stats span { color:#999; font:700 .62rem/1.4 monospace; text-transform:uppercase; }.home-skills{padding:clamp(70px,9vw,130px) 4vw;background:var(--paper)}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}.skills-grid article{padding:24px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);min-height:250px}.skills-grid article>span{color:var(--orange);font:800 .65rem/1 monospace}.skills-grid h3{font-size:2rem;letter-spacing:-.055em;margin:45px 0 24px}.home-contact { padding:clamp(80px,10vw,150px) 4vw; background:var(--acid); display:grid; grid-template-columns:.5fr 1.4fr .4fr; gap:5vw; align-items:end; }.home-contact h2 { margin:0; font-size:clamp(3rem,6vw,6.6rem); line-height:.88; letter-spacing:-.075em; }
+@media(max-width:900px){.home-hero{grid-template-columns:1fr}.hero-photo{max-width:450px}.home-section-title{grid-template-columns:1fr}.home-section-title>a{justify-self:start}.service-grid{grid-template-columns:repeat(2,1fr)}.service-card{border-bottom:1px solid var(--ink)}.skills-grid{grid-template-columns:repeat(2,1fr)}.home-contact{grid-template-columns:1fr}.quick-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.home-hero,.home-services,.highlights,.home-skills,.home-contact{padding-left:20px;padding-right:20px}.home-copy h1{font-size:21vw}.service-grid,.skills-grid{grid-template-columns:1fr}.service-card{border-right:0}.quick-stats div{padding:22px 20px}.home-contact .button{justify-self:start}}
 </style>
