@@ -66,6 +66,7 @@ const curated = {
     image: "/projects/kjv-atlas.png",
     tags: ["Bible", "JavaScript", "Python", "Search"],
     featured: 3,
+    demo: "https://kjvatlas.org",
   },
   "own-your-proof": {
     name: "Own Your Proof",
@@ -73,6 +74,7 @@ const curated = {
     image: "/projects/own-your-proof.png",
     tags: ["Marketing", "Automation", "Astro", "Operations"],
     featured: 4,
+    demo: "https://ownyourproof.com",
   },
   "bearrilla films": {
     name: "BearRilla Films",
@@ -80,6 +82,7 @@ const curated = {
     image: "/projects/bearrilla.jpg",
     tags: ["Media", "Next.js", "React", "Cloudflare"],
     featured: 5,
+    demo: "https://bearrillarecords.com",
   },
   "detail quote": {
     name: "Detail Quote",
@@ -88,6 +91,17 @@ const curated = {
     tags: ["SwiftUI", "iOS", "Sales", "Local-first"],
     featured: 6,
   },
+  "cornerstone life group": { demo: "https://mycornerstoneplan.com" },
+  "cornerstonelifegroup": { demo: "https://mycornerstoneplan.com" },
+  "ej the shooter": { demo: "https://ej-the-shooter.pages.dev" },
+  "ej-the-shooter": { demo: "https://ej-the-shooter.pages.dev" },
+  "forever young tree services": { demo: "https://foreveryoungtreeservices.com" },
+  "forever-young-tree-services": { demo: "https://foreveryoungtreeservices.com" },
+  "happy nails hyde park": { demo: "https://happy-nails-hyde-park.pages.dev" },
+  "happy-nails-hyde-park": { demo: "https://happy-nails-hyde-park.pages.dev" },
+  "in ty i trust": { demo: "https://intyitrust.com" },
+  "in-ty-i-trust": { demo: "https://intyitrust.com" },
+  stranjae: { demo: "https://stranjae.com" },
 };
 
 const depTags = {
@@ -146,7 +160,7 @@ function inspect(dir) {
     status,
     tags: override?.tags || [...tags].slice(0, 5),
     github: githubUrl(dir),
-    demo,
+    demo: override?.demo || demo,
     image: override?.image || null,
     featured: override?.featured || null,
   };

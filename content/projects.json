@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T16:37:55.592Z",
+  "generatedAt": "2026-08-05T19:44:44.501Z",
   "projectCount": 54,
   "rootsScanned": 6,
   "projects": [
@@ -47,7 +47,7 @@
         "Search"
       ],
       "github": "https://github.com/mjcreativemedia/kjv-atlas",
-      "demo": null,
+      "demo": "https://kjvatlas.org",
       "image": "/projects/kjv-atlas.png",
       "featured": 3
     },
@@ -63,7 +63,7 @@
         "Operations"
       ],
       "github": "https://github.com/mjcreativemedia/own-your-proof",
-      "demo": null,
+      "demo": "https://ownyourproof.com",
       "image": "/projects/own-your-proof.png",
       "featured": 4
     },
@@ -262,7 +262,7 @@
       "status": "active",
       "tags": [],
       "github": "https://github.com/mjcreativemedia/cornerstonelifegroup",
-      "demo": null,
+      "demo": "https://mycornerstoneplan.com",
       "image": null,
       "featured": null
     },
@@ -330,7 +330,7 @@
         "Cloudflare"
       ],
       "github": "https://github.com/mjcreativemedia/ej-the-shooter",
-      "demo": "https://github.com/mjcreativemedia/ej-the-shooter#readme",
+      "demo": "https://ej-the-shooter.pages.dev",
       "image": null,
       "featured": null
     },
@@ -374,7 +374,7 @@
         "Cloudflare"
       ],
       "github": "https://github.com/mjcreativemedia/forever-young-tree-services",
-      "demo": null,
+      "demo": "https://foreveryoungtreeservices.com",
       "image": null,
       "featured": null
     },
@@ -400,7 +400,7 @@
         "Cloudflare"
       ],
       "github": "https://github.com/mjcreativemedia/happy-nails-hyde-park",
-      "demo": null,
+      "demo": "https://happy-nails-hyde-park.pages.dev",
       "image": null,
       "featured": null
     },
@@ -681,7 +681,7 @@
         "TypeScript"
       ],
       "github": "https://github.com/mjcreativemedia/stranjae",
-      "demo": null,
+      "demo": "https://stranjae.com",
       "image": null,
       "featured": null
     },
