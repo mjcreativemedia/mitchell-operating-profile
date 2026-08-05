@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"; import PageHero from "../components/PageHero.astro"; import MediaSlot from "../components/MediaSlot.astro";
+const groups=[
+  ["Software",["SwiftUI","JavaScript","TypeScript","React","Astro","HTML / CSS","Node","REST APIs","Cloudflare","GitHub"]],
+  ["IT",["Computer repair","Network setup","Software installation","Device troubleshooting","System maintenance"]],
+  ["Maintenance",["Facility upkeep","Bike repair","General repairs","Sanitation","Issue documentation","Preventive checks"]],
+  ["Business",["Marketing","UX","Sales","Operations","Client delivery","Technical SEO"]],
+  ["Communication",["Customer service","Documentation","Teaching","Requirements gathering","Clear handoffs"]],
+  ["Tools",["AI workflows","Automation","Git","Webflow","Xcode","Command line","Analytics"]]
+];
+---
+<BaseLayout title="Skills — Mitchell Argamasilla"><PageHero eyebrow="Skills" title="Capability organized by the work." intro="A practical inventory across software, IT, maintenance, business, communication, and tools—not a wall of logos." />
+<section class="content-section"><div class="skills-grid">{groups.map(([title,skills],index)=><article><span>0{index+1}</span><h2>{title}</h2><ul>{(skills as string[]).map((skill)=><li>{skill}</li>)}</ul></article>)}</div></section>
+<section class="content-section dark-section"><div class="section-head"><h2>Proof beats a label.</h2><p>Future certifications, repairs, completed builds, and documented results can attach directly to the skills they demonstrate.</p></div><div class="visual-grid"><MediaSlot label="Certification or course"/><MediaSlot label="Repair in progress"/><MediaSlot label="Speaking or teaching"/></div></section></BaseLayout>
+<style>.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}.skills-grid article{padding:26px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}.skills-grid article>span{color:var(--orange);font:800 .65rem/1 monospace}.skills-grid h2{font-size:2.4rem;letter-spacing:-.06em;margin:50px 0 24px}.skills-grid ul{list-style:none;padding:0;margin:0}.skills-grid li{padding:12px 0;border-top:1px solid var(--line);font-weight:700}@media(max-width:800px){.skills-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.skills-grid{grid-template-columns:1fr}}</style>

@@ -1,0 +1,10 @@
+{
+  "statement": "Mental and physical performance reinforce each other. Training improves how I learn, work, adapt, and follow through.",
+  "disciplines": ["Boxing", "Strength training", "Cycling"],
+  "evidence": ["Consistency", "Discipline", "Coachability", "Physical capability", "Performance under pressure"],
+  "stats": [
+    { "label": "Weekly cycling mileage", "value": "Add verified stat" },
+    { "label": "Years boxing", "value": "Add verified stat" },
+    { "label": "Training schedule", "value": "Add verified stat" }
+  ]
+}

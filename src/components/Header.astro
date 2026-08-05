@@ -1,0 +1,13 @@
+---
+const links = [
+  ["Software", "/software"], ["Client work", "/client-work"], ["Operations", "/operations"],
+  ["Fitness", "/fitness"], ["Skills", "/skills"], ["About", "/about"]
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Mitchell Argamasilla home">MA<span>.</span></a>
+  <nav aria-label="Primary navigation">
+    {links.map(([label, href]) => <a href={href}>{label}</a>)}
+  </nav>
+  <a class="header-contact" href="/contact">Contact ↗</a>
+</header>

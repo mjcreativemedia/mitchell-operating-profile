@@ -13,9 +13,8 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/.vinext/
+# framework caches
+/.astro/
 /out/
 
 # misc

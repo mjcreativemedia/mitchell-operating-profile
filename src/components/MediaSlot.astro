@@ -1,0 +1,7 @@
+---
+interface Props { label: string; note?: string; src?: string | null; alt?: string; ratio?: "wide" | "portrait" | "square"; }
+const { label, note = "Add from phone", src, alt = label, ratio = "wide" } = Astro.props;
+---
+<div class:list={["media-slot", `ratio-${ratio}`, { filled: src }]}>
+  {src ? <img src={src} alt={alt} loading="lazy" /> : <div class="slot-copy"><span>Image needed</span><strong>{label}</strong><small>{note}</small></div>}
+</div>

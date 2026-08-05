@@ -174,5 +174,5 @@ const output = {
   projects,
 };
 
-fs.writeFileSync(path.join(siteRoot, "data", "projects.json"), JSON.stringify(output, null, 2) + "\n");
-console.log(`Generated data/projects.json with ${projects.length} projects.`);
+fs.writeFileSync(path.join(siteRoot, "content", "projects.json"), JSON.stringify(output, null, 2) + "\n");
+console.log(`Generated content/projects.json with ${projects.length} projects.`);
