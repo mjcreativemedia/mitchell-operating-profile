@@ -104,6 +104,11 @@ const curated = {
   stranjae: { demo: "https://stranjae.com", image: "/sites/stranjae.jpg" },
 };
 
+const privateProjects = new Set([
+  "biblical earth explorer",
+  "real hebrew israelites archive",
+]);
+
 const depTags = {
   react: "React", next: "Next.js", astro: "Astro", vite: "Vite",
   tailwindcss: "Tailwind CSS", "drizzle-orm": "Drizzle", express: "Express",
@@ -171,7 +176,8 @@ if (fs.existsSync(detailQuote)) candidates.add(detailQuote);
 
 const rawProjects = [...candidates]
   .filter((dir) => !dir.startsWith(siteRoot) && !dir.includes(`${path.sep}Codex${path.sep}`) || dir === detailQuote)
-  .map(inspect);
+  .map(inspect)
+  .filter((project) => !privateProjects.has(project.name.toLowerCase()));
 
 const byName = new Map();
 for (const project of rawProjects) {

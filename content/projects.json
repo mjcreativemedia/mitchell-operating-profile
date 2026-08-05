@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-05T19:55:55.556Z",
-  "projectCount": 54,
+  "generatedAt": "2026-08-05T19:57:20.933Z",
+  "projectCount": 52,
   "rootsScanned": 6,
   "projects": [
     {
@@ -154,20 +154,6 @@
       "tags": [],
       "github": null,
       "demo": null,
-      "image": null,
-      "featured": null
-    },
-    {
-      "name": "Biblical Earth Explorer",
-      "description": "An interactive, educational 3D visualization of the Biblical Earth model described in the source material. Built with Vite, vanilla JavaScript, Three.js, and plain CSS.",
-      "category": "Tools",
-      "status": "active",
-      "tags": [
-        "Vite",
-        "Cloudflare"
-      ],
-      "github": "https://github.com/mjcreativemedia/biblical-earth-explorer",
-      "demo": "https://dash.cloudflare.com/",
       "image": null,
       "featured": null
     },
@@ -570,19 +556,6 @@
         "Cloudflare"
       ],
       "github": null,
-      "demo": null,
-      "image": null,
-      "featured": null
-    },
-    {
-      "name": "Real Hebrew Israelites Archive",
-      "description": "A local software project in Mitchell's working archive.",
-      "category": "Projects",
-      "status": "archived",
-      "tags": [
-        "Astro"
-      ],
-      "github": "https://github.com/mjcreativemedia/real-hebrew-israelites-archive",
       "demo": null,
       "image": null,
       "featured": null
