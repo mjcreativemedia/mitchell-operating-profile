@@ -1,9 +1,9 @@
 ---
-interface Props { src: string; poster: string; title: string; caption: string; }
-const { src, poster, title, caption } = Astro.props;
+interface Props { src: string; poster: string; title: string; caption: string; autoplayLoop?: boolean; }
+const { src, poster, title, caption, autoplayLoop = false } = Astro.props;
 ---
 <figure class="video-card">
-  <video controls playsinline preload="metadata" poster={poster} aria-label={title}>
+  <video controls={!autoplayLoop} autoplay={autoplayLoop} muted={autoplayLoop} loop={autoplayLoop} playsinline preload={autoplayLoop ? "auto" : "metadata"} poster={poster} aria-label={title}>
     <source src={src} type="video/mp4" />
   </video>
   <figcaption><strong>{title}</strong><span>{caption}</span></figcaption>
