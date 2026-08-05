@@ -1,13 +1,8 @@
 [
-  { "name": "Forever Young Tree Services", "type": "Owner-operated tree service proof site", "url": "https://foreveryoungtreeservices.com", "image": null },
-  { "name": "Cornerstone Life Group", "type": "Final expense lead and qualification website", "url": "https://mycornerstoneplan.com", "image": null },
-  { "name": "King C.I.G. — In Ty I Trust", "type": "Artist website and media platform", "url": "https://intyitrust.com", "image": null },
-  { "name": "BearRilla Films", "type": "Cinematic media and streaming platform", "url": "https://bearrillarecords.com", "image": "/projects/bearrilla.jpg" },
-  { "name": "Stranjae Hair", "type": "Hair brand and booking experience", "url": "https://stranjae.com", "image": null },
-  { "name": "EJ The Shooter", "type": "Chicago portrait photography proof site", "url": "https://ej-the-shooter.pages.dev", "image": null },
-  { "name": "Happy Nails Hyde Park", "type": "Local nail salon website", "url": "https://happy-nails-hyde-park.pages.dev", "image": null },
-  { "name": "Muscle Wolf Gang Fitness", "type": "Fitness brand and website", "url": null, "image": null },
-  { "name": "Lakeshore Outdoor Services", "type": "Service-area website", "url": null, "image": null },
-  { "name": "Daniel’s Plumbing", "type": "Local proof and lead system", "url": null, "image": "/projects/own-your-proof.png" },
-  { "name": "Dough Boyz Party Snacks", "type": "Food brand website", "url": null, "image": null }
+  { "name": "Forever Young Tree Services", "type": "Owner-operated tree service proof site", "url": "https://foreveryoungtreeservices.com", "image": "/sites/forever-young.webp" },
+  { "name": "Cornerstone Life Group", "type": "Final expense lead and qualification website", "url": "https://mycornerstoneplan.com", "image": "/sites/cornerstone.jpg" },
+  { "name": "King C.I.G. — In Ty I Trust", "type": "Artist website and media platform", "url": "https://intyitrust.com", "image": "/sites/in-ty-i-trust.jpg" },
+  { "name": "Stranjae Hair", "type": "Hair brand and product experience", "url": "https://stranjae.com", "image": "/sites/stranjae.jpg" },
+  { "name": "EJ The Shooter", "type": "Chicago portrait photography proof site", "url": "https://ej-the-shooter.pages.dev", "image": "/sites/ej-the-shooter.jpg" },
+  { "name": "Happy Nails Hyde Park", "type": "Local nail salon website", "url": "https://happy-nails-hyde-park.pages.dev", "image": "/sites/happy-nails.webp" }
 ]

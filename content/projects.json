@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:44:44.501Z",
+  "generatedAt": "2026-08-05T19:55:55.556Z",
   "projectCount": 54,
   "rootsScanned": 6,
   "projects": [
@@ -263,7 +263,7 @@
       "tags": [],
       "github": "https://github.com/mjcreativemedia/cornerstonelifegroup",
       "demo": "https://mycornerstoneplan.com",
-      "image": null,
+      "image": "/sites/cornerstone.jpg",
       "featured": null
     },
     {
@@ -331,7 +331,7 @@
       ],
       "github": "https://github.com/mjcreativemedia/ej-the-shooter",
       "demo": "https://ej-the-shooter.pages.dev",
-      "image": null,
+      "image": "/sites/ej-the-shooter.jpg",
       "featured": null
     },
     {
@@ -375,7 +375,7 @@
       ],
       "github": "https://github.com/mjcreativemedia/forever-young-tree-services",
       "demo": "https://foreveryoungtreeservices.com",
-      "image": null,
+      "image": "/sites/forever-young.webp",
       "featured": null
     },
     {
@@ -401,13 +401,13 @@
       ],
       "github": "https://github.com/mjcreativemedia/happy-nails-hyde-park",
       "demo": "https://happy-nails-hyde-park.pages.dev",
-      "image": null,
+      "image": "/sites/happy-nails.webp",
       "featured": null
     },
     {
       "name": "In Ty I Trust",
       "description": "Static Astro website for King C.I.G., prepared for Cloudflare Pages.",
-      "category": "Projects",
+      "category": "Client work",
       "status": "active",
       "tags": [
         "Astro",
@@ -416,7 +416,7 @@
       ],
       "github": "https://github.com/mjcreativemedia/in-ty-i-trust",
       "demo": "https://intyitrust.com",
-      "image": null,
+      "image": "/sites/in-ty-i-trust.jpg",
       "featured": null
     },
     {
@@ -682,7 +682,7 @@
       ],
       "github": "https://github.com/mjcreativemedia/stranjae",
       "demo": "https://stranjae.com",
-      "image": null,
+      "image": "/sites/stranjae.jpg",
       "featured": null
     },
     {

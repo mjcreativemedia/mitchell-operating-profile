@@ -2,8 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MediaSlot from "../components/MediaSlot.astro";
 import site from "../../content/site.json";
-import { projects, projectCount } from "../lib/projects";
-const featured = projects.filter((project) => project.featured).slice(0, 4);
+import { appProjects, appProjectCount } from "../lib/projects";
+const featured = appProjects.filter((project) => project.featured).slice(0, 4);
 ---
 <BaseLayout>
   <section class="home-hero">
@@ -20,7 +20,7 @@ const featured = projects.filter((project) => project.featured).slice(0, 4);
   </section>
 
   <section class="home-projects">
-    <div class="home-section-title"><p class="eyebrow">Featured software</p><h2>Four projects. Four real problems.</h2><a href="/software/">View all {projectCount} projects →</a></div>
+    <div class="home-section-title"><p class="eyebrow">Featured apps & tools</p><h2>Four projects. Four real problems.</h2><a href="/software/">View all {appProjectCount} builds →</a></div>
     <div class="project-showcase">{featured.map((project) => <a href={`/software/${project.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}/`} class="showcase-card"><MediaSlot label={`${project.name} screenshot`} src={project.image} note="Replace or add more screens" /><div><h3>{project.name}</h3><div class="tag-list">{project.tags.slice(0,3).map((tag) => <span>{tag}</span>)}</div></div></a>)}</div>
   </section>
 
@@ -35,7 +35,7 @@ const featured = projects.filter((project) => project.featured).slice(0, 4);
   </section>
 
   <section class="quick-stats">
-    <div><strong>{projectCount}</strong><span>software projects indexed</span></div><div><strong>2017</strong><span>started programming</span></div><div><strong>Chicago</strong><span>operating base</span></div><div><strong>Purdue</strong><span>university foundation</span></div>
+    <div><strong>{appProjectCount}</strong><span>apps & tools indexed</span></div><div><strong>2017</strong><span>started programming</span></div><div><strong>Chicago</strong><span>operating base</span></div><div><strong>Purdue</strong><span>university foundation</span></div>
   </section>
 
   <section class="home-contact"><p class="eyebrow">The short version</p><h2>I build things, solve problems, and follow through.</h2><a class="button dark" href="/contact/">Start a conversation ↗</a></section>
