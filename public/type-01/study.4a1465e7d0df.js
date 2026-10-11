@@ -3,7 +3,7 @@ const duration=7000,reduced=matchMedia('(prefers-reduced-motion: reduce)').match
 let running=!reduced,elapsed=reduced?4500:0,last=performance.now(),recording=false;
 const clamp=x=>Math.max(0,Math.min(1,x));const ease=x=>1-Math.pow(1-clamp(x),4);const smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
 function tracked(text,x,y,size,spacing,weight=600){ctx.font=`${weight} ${size}px Syne`;let total=[...text].reduce((n,c)=>n+ctx.measureText(c).width,0)+(text.length-1)*spacing;for(const c of text){ctx.fillText(c,x,y);x+=ctx.measureText(c).width+spacing}return total}
-function draw(ms){const t=ms/1000,W=canvas.width,H=canvas.height;ctx.setTransform(W/1920,0,0,H/1080,0,0);ctx.fillStyle='#20231e';ctx.fillRect(0,0,1920,1080);
+function draw(ms){const t=ms/1000,W=canvas.width,H=canvas.height;ctx.setTransform(W/1920,0,0,H/1440,0,0);ctx.fillStyle='#20231e';ctx.fillRect(0,0,1920,1440);ctx.translate(0,180);
 ctx.fillStyle='#8d9481';tracked('INDEPENDENT MOTION STUDY',108,83,18,3,400);tracked('001 / TYPE',1585,83,18,2,400);
 const exit=smooth((t-5.95)/.65),alpha=1-exit;ctx.globalAlpha=alpha;
 const words=[['LESS,',.25,385],['BUT',.85,635],['BETTER.',1.45,885]];
