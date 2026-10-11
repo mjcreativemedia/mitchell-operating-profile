@@ -73,7 +73,10 @@ box(2.25,1.35,.035,3.75,.75,1.48,tile);
 box(.95,.11,1.05,3.15,.1,2.02,stone);
 const glass=new T.MeshPhysicalMaterial({color:'#ccddd6',transparent:true,opacity:.17,roughness:.08,side:T.DoubleSide,depthWrite:false});
 box(.018,2.1,1,3.68,1.13,2.02,glass);box(.024,2.1,.024,3.68,1.13,2.5,dark);
-cyl(.018,1.65,3.08,1.48,1.54,dark);box(.31,.035,.04,3.23,2.29,1.54,dark);cyl(.12,.03,3.37,2.26,1.54,dark);
+// Rain head extends into the shower, with its spray face underneath.
+cyl(.018,1.65,3.15,1.48,1.6,dark);box(.04,.035,.45,3.15,2.29,1.82,dark);
+cyl(.16,.045,3.15,2.25,2.04,dark);cyl(.145,.008,3.15,2.223,2.04,'#aeb4a6');
+for(let i=0;i<12;i++){const a=i*Math.PI/6;cyl(.008,.01,3.15+Math.cos(a)*.1,2.216,2.04+Math.sin(a)*.1,dark)}
 box(.1,.16,.065,3.08,1.13,1.55,dark);
 // Floating vanity, ceramic basin, and warm round mirror.
 box(.8,.48,.52,4.34,.82,1.8,oak);box(.88,.075,.58,4.34,1.09,1.8,stone);
@@ -82,13 +85,26 @@ const mirror=new T.Mesh(new T.CircleGeometry(.36,48),new T.MeshStandardMaterial(
 const frame=new T.Mesh(new T.TorusGeometry(.38,.018,8,48),mat(oak));frame.position.copy(mirror.position);scene.add(frame);
 box(.52,.04,.055,4.34,2.47,1.58,new T.MeshBasicMaterial({color:'#ffe4b2'}));
 const bathLight=new T.PointLight('#ffe3b3',1.2,3);bathLight.position.set(4.3,2.35,1.85);scene.add(bathLight);
-// Toilet and a neatly folded towel.
+// Toilet faces back into the bathroom, with its tank at the outer wall.
+const toiletStart=scene.children.length;
 box(.52,.65,.22,4.32,.48,3.02,'#eceee6');sphere(.29,4.32,.43,3.37,'#eceee6',[.85,.65,1.2]);sphere(.27,4.32,.57,3.37,cream,[.85,.16,1.22]);cyl(.15,.36,4.32,.22,3.29,'#eceee6');
+for(const o of scene.children.slice(toiletStart)){o.position.x=8.64-o.position.x;o.position.z=6.7-o.position.z;o.rotation.y+=Math.PI;}
 box(.05,.045,.57,2.65,1.3,3.15,dark);box(.075,.55,.41,2.68,1.02,3.15,'#b6bba4');
 box(.76,.025,.48,3.53,.066,3.35,'#ccc1a8');
 const bathroom=new T.Group();scene.add(bathroom);
 for(const o of scene.children.slice(zoneStart,-1)){scene.remove(o);bathroom.add(o)}
 bathroom.position.set(5,0,-5.3);
+// Full-height oak entrance in the opposite, front-left corner.
+const doorOak='#986b40',brass=new T.MeshStandardMaterial({color:'#b8a06b',metalness:.75,roughness:.3});
+box(.1,3.35,1.35,-4.85,1.675,3.23,dark);
+box(.08,3.17,1.18,-4.77,1.62,3.23,doorOak);
+for(let i=0;i<10;i++)box(.016,3.05,.012,-4.721,1.62,2.71+i*.115,'#765231');
+for(const z of [2.57,3.89])box(.13,3.42,.085,-4.76,1.71,z,oak);
+box(.13,.085,1.4,-4.76,3.38,3.23,oak);
+box(.12,.065,1.25,-4.75,.075,3.23,brass);
+box(.075,.54,.032,-4.65,1.42,2.8,brass);
+for(const y of [1.2,1.64])box(.11,.032,.032,-4.7,y,2.8,brass);
+box(.65,.025,1.38,-4.26,.045,3.22,'#aaa18b');
 scene.add(new T.HemisphereLight('#f1e8d8','#8d8270',2.5));const sun=new T.DirectionalLight('#ffe2ad',4);sun.position.set(5,8,-2);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-14,right:14,top:12,bottom:-12});sun.shadow.bias=-.0005;sun.shadow.normalBias=.025;scene.add(sun);
 // Late-afternoon shafts across the floor.
 const lightMat=new T.MeshBasicMaterial({color:'#f7dfa6',transparent:true,opacity:.16,depthWrite:false});for(let i=0;i<3;i++){let beam=box(1.05,.009,4.7,.5+i*1.25,.045,-.5,lightMat);beam.rotation.y=-.48}
