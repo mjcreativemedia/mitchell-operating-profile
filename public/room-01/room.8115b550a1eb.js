@@ -30,7 +30,7 @@ box(.73,.11,.7,2.4,.8,-.85,olive);box(.73,.7,.1,2.4,1.08,-.52,olive);for(let x o
 box(.65,2.45,1.75,-4.48,1.23,1.75,oak);box(.08,2.35,1.62,-4.1,1.24,1.75,oak);for(let y of [.12,.72,1.32,1.92,2.45])box(.8,.07,1.8,-4.4,y,1.75,oak);
 const bookColors=['#738078','#c2ad89','#8c6150','#d4c8aa','#555f58'];for(let j=0;j<3;j++)for(let i=0;i<9;i++){let h=.28+(Math.sin(i*7+j)+1)*.1;box(.42,h,.09,-4.22,.76+j*.6+h/2,1.05+i*.155,bookColors[(i+j)%5])}
 function plant(x,y,z,size=1){cyl(.19*size,.35*size,x,y+.17*size,z,'#a97250',.24*size);for(let i=0;i<9;i++){let a=i*2.4;let leaf=sphere(.18*size,x+Math.cos(a)*.18*size,y+(.55+i*.035)*size,z+Math.sin(a)*.18*size,'#576c49',[.55,1.7,.5]);leaf.rotation.z=Math.cos(a)*.5}}
-plant(1.65,0,3.25,1.3);plant(-4.36,2.5,1.75,.7);
+plant(3.4,0,1.3,1.5);plant(-4.36,2.5,1.75,.7);
 // Woven rug, quiet art, and a round pouf.
 box(4.9,.035,3,0,.015,1.2,'#c5b398');for(let i=0;i<36;i++)box(4.8,.005,.009,0,.036,-.25+i*.081,'#d4c4ac');cyl(.52,.44,.7,.24,2.45,'#a99d7d');
 box(.07,1.3,1.02,-4.85,2.85,-1,'#6e5a40');box(.08,1.17,.89,-4.79,2.85,-1,'#eee5cd');sphere(.33,-4.73,2.93,-1,'#b78960',[.03,1,1]);box(.09,.16,.6,-4.72,2.52,-1,'#7d886e');
@@ -94,17 +94,24 @@ box(.76,.025,.48,3.53,.066,3.35,'#ccc1a8');
 const bathroom=new T.Group();scene.add(bathroom);
 for(const o of scene.children.slice(zoneStart,-1)){scene.remove(o);bathroom.add(o)}
 bathroom.position.set(5,0,-5.3);
-// Full-height oak entrance in the opposite, front-left corner.
+// Secure oak entrance in the empty front-right corner.
 const doorOak='#986b40',brass=new T.MeshStandardMaterial({color:'#b8a06b',metalness:.75,roughness:.3});
-box(.1,3.35,1.35,-4.85,1.675,3.23,dark);
-box(.08,3.17,1.18,-4.77,1.62,3.23,doorOak);
-for(let i=0;i<10;i++)box(.016,3.05,.012,-4.721,1.62,2.71+i*.115,'#765231');
-for(const z of [2.57,3.89])box(.13,3.42,.085,-4.76,1.71,z,oak);
-box(.13,.085,1.4,-4.76,3.38,3.23,oak);
-box(.12,.065,1.25,-4.75,.075,3.23,brass);
-box(.075,.54,.032,-4.65,1.42,2.8,brass);
-for(const y of [1.2,1.64])box(.11,.032,.032,-4.7,y,2.8,brass);
-box(.65,.025,1.38,-4.26,.045,3.22,'#aaa18b');
+box(.22,3.55,1.8,7.47,1.775,2.96,wall);
+box(.25,3.3,1.43,7.49,1.65,2.96,dark);
+box(.27,3.1,1.22,7.5,1.61,2.96,doorOak);
+// Recessed oak grooves and a substantial dark steel frame.
+for(let i=0;i<9;i++)for(const x of [7.355,7.645])box(.01,2.98,.009,x,1.61,2.44+i*.13,'#765231');
+for(const z of [2.28,3.64])box(.3,3.34,.065,7.5,1.67,z,dark);
+box(.3,.065,1.44,7.5,3.32,2.96,dark);
+box(.34,.065,1.42,7.5,.065,2.96,brass);
+// Pull, deadbolt, peephole, and three visible hinges on both faces.
+for(const x of [7.31,7.69]){
+box(.065,.55,.04,x,1.36,3.39,brass);
+box(.08,.13,.11,x,1.85,3.39,dark);
+const peephole=cyl(.027,.03,x,2.25,2.96,brass);peephole.rotation.z=Math.PI/2;
+for(const y of [.48,1.62,2.75])box(.06,.16,.055,x,y,2.35,dark);
+}
+box(.85,.025,1.42,6.72,.045,2.96,'#aaa18b');
 scene.add(new T.HemisphereLight('#f1e8d8','#8d8270',2.5));const sun=new T.DirectionalLight('#ffe2ad',4);sun.position.set(5,8,-2);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-14,right:14,top:12,bottom:-12});sun.shadow.bias=-.0005;sun.shadow.normalBias=.025;scene.add(sun);
 // Late-afternoon shafts across the floor.
 const lightMat=new T.MeshBasicMaterial({color:'#f7dfa6',transparent:true,opacity:.16,depthWrite:false});for(let i=0;i<3;i++){let beam=box(1.05,.009,4.7,.5+i*1.25,.045,-.5,lightMat);beam.rotation.y=-.48}
