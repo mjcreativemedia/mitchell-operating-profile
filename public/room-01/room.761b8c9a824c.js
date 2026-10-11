@@ -5,8 +5,8 @@ const camera=new T.PerspectiveCamera(innerWidth<700?56:39,innerWidth/innerHeight
 function box(w,h,d,x,y,z,c,group=scene){let o=new T.Mesh(new T.BoxGeometry(w,h,d),typeof c==='string'?mat(c):c);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;group.add(o);return o}function cyl(r,h,x,y,z,c,r2=r){let o=new T.Mesh(new T.CylinderGeometry(r2,r,h,32),mat(c));o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;scene.add(o);return o}
 function sphere(r,x,y,z,c,s=[1,1,1]){let o=new T.Mesh(new T.SphereGeometry(r,20,16),mat(c));o.position.set(x,y,z);o.scale.set(...s);o.castShadow=true;scene.add(o);return o}
 const oak='#aa7c50',dark='#413a2e',wall='#e9e3d6',cream='#ece5d4',olive='#75775d';
-box(10,.3,8,0,-.2,0,'#b49168');for(let i=0;i<20;i++)box(.014,.005,8,-4.75+i*.5,-.043,0,'#9f805d');for(let i=0;i<10;i++)box(.48,.006,.013,-4.75+i, -.04,(i%3-1)*2,'#9f805d');
-box(.18,4.8,8,-5,2.3,0,wall);box(10,4.8,.18,0,2.3,-4,wall);box(10,.12,.09,0,.05,-3.86,cream);box(.09,.12,8,-4.86,.05,0,cream);
+box(12.5,.3,8,1.25,-.2,0,'#b49168');for(let i=0;i<25;i++)box(.014,.005,8,-4.75+i*.5,-.043,0,'#9f805d');for(let i=0;i<10;i++)box(.48,.006,.013,-4.75+i, -.04,(i%3-1)*2,'#9f805d');
+box(.18,4.8,8,-5,2.3,0,wall);box(12.5,4.8,.18,1.25,2.3,-4,wall);box(12.5,.12,.09,1.25,.05,-3.86,cream);box(.09,.12,8,-4.86,.05,0,cream);
 // A framed city window, set into the rear wall.
 box(4.75,2.9,.12,1.75,2.65,-3.86,'#768c91');const sky=new T.MeshBasicMaterial({color:'#b8c1bb'});box(4.5,2.65,.13,1.75,2.65,-3.77,sky);
 for(let i=0;i<8;i++){const x=-.4+i*.58,h=.65+(Math.sin(i*9)+1)*.5;box(.48,h,.06,x,1.32+h/2,-3.68,i%2?'#87938e':'#97a19a');for(let j=0;j<3;j++)for(let k=0;k<4;k++)box(.055,.1,.01,x-.14+j*.14,1.5+k*.24,-3.635,'#c5c7ab')}
@@ -34,7 +34,8 @@ plant(1.65,0,3.25,1.3);plant(-4.36,2.5,1.75,.7);
 // Woven rug, quiet art, and a round pouf.
 box(4.9,.035,3,0,.015,1.2,'#c5b398');for(let i=0;i<36;i++)box(4.8,.005,.009,0,.036,-.25+i*.081,'#d4c4ac');cyl(.52,.44,.7,.24,2.45,'#a99d7d');
 box(.07,1.3,1.02,-4.85,2.85,-1,'#6e5a40');box(.08,1.17,.89,-4.79,2.85,-1,'#eee5cd');sphere(.33,-4.73,2.93,-1,'#b78960',[.03,1,1]);box(.09,.16,.6,-4.72,2.52,-1,'#7d886e');
-// Compact kitchenette along the open right edge.
+// Kitchen occupies the new rear-right bay, facing the open room.
+let zoneStart=scene.children.length;
 const tile='#dedfd3',stone='#eee8da',sage='#7e8971';
 box(.88,1.12,2.2,4.43,.56,-.05,sage);
 box(.98,.09,2.3,4.4,1.16,-.05,stone);
@@ -49,11 +50,24 @@ for(const z of [.24,.57]){const ring=new T.Mesh(new T.TorusGeometry(.105,.009,8,
 box(.07,.46,1.2,3.94,.56,.3,dark);box(.024,.33,.95,3.895,.55,.3,'#505b50');box(.04,.035,.72,3.87,.78,.3,'#a6ab9e');
 box(.7,.65,1.3,4.48,2.36,-.28,oak);for(let z of [-.61,.05])box(.024,.56,.6,4.1,2.36,z,oak);
 box(.55,.055,.65,4.53,1.92,.72,oak);cyl(.085,.16,4.48,2.025,.74,cream);
-// Bathroom alcove with an open front for the architectural cutaway.
+// Turn the cabinet fronts toward the hero camera and clear the desk.
+const kitchen=new T.Group();scene.add(kitchen);
+for(const o of scene.children.slice(zoneStart,-1)){scene.remove(o);o.position.x-=4.4;kitchen.add(o)}
+kitchen.rotation.y=Math.PI/2;kitchen.position.set(5.85,0,-3.32);
+// Bathroom is a separate wing beyond the main floor's right boundary.
+zoneStart=scene.children.length;
+box(2.5,.3,2.8,3.75,-.2,2.7,'#b49168');
 box(2.3,.045,2.55,3.75,.025,2.7,tile);
 for(let x=2.65;x<4.9;x+=.3)box(.008,.006,2.5,x,.053,2.7,'#bec5b8');
 for(let z=1.45;z<4;z+=.3)box(2.25,.006,.008,3.75,.053,z,'#bec5b8');
-box(2.4,2.9,.12,3.75,1.45,1.39,wall);box(.12,2.9,2.5,2.55,1.45,2.7,wall);
+box(2.4,2.9,.12,3.75,1.45,1.39,wall);// Shared wall has a real doorway and an open oak door.
+box(.12,2.9,1.2,2.55,1.45,2.02,wall);
+box(.12,.4,1.3,2.55,2.7,3.27,wall);
+box(.12,2.9,.15,2.55,1.45,3.98,wall);
+for(const z of [2.65,3.89])box(.17,2.5,.065,2.55,1.25,z,oak);
+box(.17,.065,1.3,2.55,2.49,3.27,oak);
+box(1.16,2.36,.065,3.15,1.18,3.87,oak);
+box(.11,.045,.1,3.64,1.12,3.8,dark);
 box(2.25,1.35,.035,3.75,.75,1.48,tile);
 // Walk-in shower: low tray, clear panel, rain head.
 box(.95,.11,1.05,3.15,.1,2.02,stone);
@@ -72,10 +86,13 @@ const bathLight=new T.PointLight('#ffe3b3',1.2,3);bathLight.position.set(4.3,2.3
 box(.52,.65,.22,4.32,.48,3.02,'#eceee6');sphere(.29,4.32,.43,3.37,'#eceee6',[.85,.65,1.2]);sphere(.27,4.32,.57,3.37,cream,[.85,.16,1.22]);cyl(.15,.36,4.32,.22,3.29,'#eceee6');
 box(.05,.045,.57,2.65,1.3,3.15,dark);box(.075,.55,.41,2.68,1.02,3.15,'#b6bba4');
 box(.76,.025,.48,3.53,.066,3.35,'#ccc1a8');
-scene.add(new T.HemisphereLight('#f1e8d8','#8d8270',2.5));const sun=new T.DirectionalLight('#ffe2ad',4);sun.position.set(5,8,-2);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-9,right:9,top:9,bottom:-9});sun.shadow.bias=-.0005;sun.shadow.normalBias=.025;scene.add(sun);
+const bathroom=new T.Group();scene.add(bathroom);
+for(const o of scene.children.slice(zoneStart,-1)){scene.remove(o);bathroom.add(o)}
+bathroom.position.set(5,0,-5.3);
+scene.add(new T.HemisphereLight('#f1e8d8','#8d8270',2.5));const sun=new T.DirectionalLight('#ffe2ad',4);sun.position.set(5,8,-2);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-14,right:14,top:12,bottom:-12});sun.shadow.bias=-.0005;sun.shadow.normalBias=.025;scene.add(sun);
 // Late-afternoon shafts across the floor.
 const lightMat=new T.MeshBasicMaterial({color:'#f7dfa6',transparent:true,opacity:.16,depthWrite:false});for(let i=0;i<3;i++){let beam=box(1.05,.009,4.7,.5+i*1.25,.045,-.5,lightMat);beam.rotation.y=-.48}
-const presets=[[[11,9,13],[0,1,0]],[[7,4,5],[2.25,1.3,-2]],[[3,4,7],[-4,1.35,1.7]],[[3,5,8],[-2.9,.8,-1]],[[3.3,3.2,3.8],[1.8,2.5,-3.5]],[[9,5,5],[4.35,1.4,0]],[[8,5.5,8],[3.7,1.1,2.65]]];const target=new T.Vector3(),desired=new T.Vector3(),look=new T.Vector3();let view=0,pointer=new T.Vector2(),audio=null,musicOn=false,lampOn=true;
+const presets=[[[16,12,19],[2,1,-.2]],[[7,4,5],[2.25,1.3,-2]],[[3,4,7],[-4,1.35,1.7]],[[3,5,8],[-2.9,.8,-1]],[[3.3,3.2,3.8],[1.8,2.5,-3.5]],[[8,5,3],[5.85,1.35,-3.25]],[[14,6,4],[8.75,1.15,-2.6]]];const target=new T.Vector3(),desired=new T.Vector3(),look=new T.Vector3();let view=0,pointer=new T.Vector2(),audio=null,musicOn=false,lampOn=true;
 const titles=['Make yourself at home.','A little space for big ideas.','Good company, on every shelf.','Let the day soften.','The city can wait.','Small kitchen. Daily rituals.','A quiet place to refresh.'];const copies=['Explore the room. Find your favorite corner.<br>Click the lamp, speaker, or window to settle in.','A notebook, a warm cup, and nowhere else to be.','A few favorites. Always within reach.','Neutral linen. Warm light. Nothing more needed.','Golden leaves, distant traffic, a slower afternoon.','A warm countertop, a simple cooktop, and space for your morning cup.','A walk-in shower, floating vanity, and soft warm light.'];
 function setView(i){view=i;desired.fromArray(presets[i][0]);target.fromArray(presets[i][1]);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',+b.dataset.view===i));document.querySelector('#viewTitle').textContent=titles[i];document.querySelector('#viewCopy').innerHTML=copies[i];if(audio)audio.mix()}
 setView(0);camera.position.copy(desired);look.copy(target);document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(+b.dataset.view));
